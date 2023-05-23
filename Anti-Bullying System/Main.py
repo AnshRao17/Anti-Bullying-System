@@ -47,7 +47,8 @@ with mp_hands.Hands(
                 pinky_tip = hand_landmarks.landmark[mp_hands.HandLandmark.PINKY_TIP]
 
                 if thumb_tip.y < index_tip.y and middle_tip.y < ring_tip.y and index_tip.y < middle_tip.y < ring_tip.y and pinky_tip.y < middle_tip.y:
-                    # Take selfie
+                    
+                    
                     selfie_count += 1
                     filename = f"Victims/selfie_{selfie_count}.jpg"
                     cv2.imwrite(filename, frame)
